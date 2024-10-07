@@ -6,7 +6,7 @@
 /*   By: dteruya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 12:48:54 by dteruya           #+#    #+#             */
-/*   Updated: 2024/10/07 12:48:01 by dteruya          ###   ########.fr       */
+/*   Updated: 2024/10/07 16:23:34 by dteruya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 int	ft_iterative_factorial(int nb)
 {
 	int	i;
-	
+
 	i = nb - 1;
 	if (nb == 0 || nb == 1)
 	{
-		return(1);
+		return (1);
 	}
 	else if (i > 0)
-	{	
-		while(i != 1)
+	{
+		while (i != 1)
 		{
 			nb = nb * i;
 			i--;
@@ -32,7 +32,7 @@ int	ft_iterative_factorial(int nb)
 	}
 	else
 	{
-		return(0);
+		return (0);
 	}
 }
 /*
