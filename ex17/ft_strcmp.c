@@ -1,43 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dteruya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/03 12:48:54 by dteruya           #+#    #+#             */
-/*   Updated: 2024/10/07 12:48:01 by dteruya          ###   ########.fr       */
+/*   Created: 2024/10/07 12:01:56 by dteruya           #+#    #+#             */
+/*   Updated: 2024/10/07 16:13:58 by dteruya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_iterative_factorial(int nb)
+int	ft_strcmp(char *s1, char *s2)
 {
 	int	i;
+	int	x;
 	
-	i = nb - 1;
-	if (nb == 0 || nb == 1)
+	x = 0;
+	i = 0;
+	if(s1[i] != '\0' || s2[i] != '\0')
 	{
-		return(1);
-	}
-	else if (i > 0)
-	{	
-		while(i != 1)
+		while(x == 0)
 		{
-			nb = nb * i;
-			i--;
+			x = s1[i] - s2[i];
+			i++;
 		}
-		return (nb);
+		return(x);
 	}
 	else
 	{
-		return(0);
+		return (0);
 	}
 }
 /*
 int	main(void)
 {
-	printf("%d", ft_iterative_factorial(0));
+	char	banana[] = "aaaaaaab";
+	char	apple[] = "aaaaaaac";
+	printf("%d", ft_strcmp(banana, apple));
 	return(0);
 }*/

@@ -1,43 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dteruya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/03 12:48:54 by dteruya           #+#    #+#             */
-/*   Updated: 2024/10/07 12:48:01 by dteruya          ###   ########.fr       */
+/*   Created: 2024/10/07 09:07:01 by dteruya           #+#    #+#             */
+/*   Updated: 2024/10/07 09:20:08 by dteruya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+void	ft_putchar(char c);
 
-int	ft_iterative_factorial(int nb)
+void	ft_putstr(char *str)
 {
 	int	i;
-	
-	i = nb - 1;
-	if (nb == 0 || nb == 1)
+
+	i = 0;
+	while(str[i] != '\0')
 	{
-		return(1);
-	}
-	else if (i > 0)
-	{	
-		while(i != 1)
-		{
-			nb = nb * i;
-			i--;
-		}
-		return (nb);
-	}
-	else
-	{
-		return(0);
+		ft_putchar(str[i]);
+		i++;
 	}
 }
 /*
 int	main(void)
 {
-	printf("%d", ft_iterative_factorial(0));
+	char	water[] = "agua mineral";
+	ft_putstr(water);
 	return(0);
 }*/

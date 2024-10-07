@@ -1,43 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dteruya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/03 12:48:54 by dteruya           #+#    #+#             */
-/*   Updated: 2024/10/07 12:48:01 by dteruya          ###   ########.fr       */
+/*   Created: 2024/10/07 09:21:32 by dteruya           #+#    #+#             */
+/*   Updated: 2024/10/07 09:28:18 by dteruya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_iterative_factorial(int nb)
+int	ft_strlen(char *str)
 {
 	int	i;
-	
-	i = nb - 1;
-	if (nb == 0 || nb == 1)
+
+	i = 0;
+	while(str[i] != '\0')
 	{
-		return(1);
+		i++;
 	}
-	else if (i > 0)
-	{	
-		while(i != 1)
-		{
-			nb = nb * i;
-			i--;
-		}
-		return (nb);
-	}
-	else
-	{
-		return(0);
-	}
+	return(i);
 }
 /*
 int	main(void)
 {
-	printf("%d", ft_iterative_factorial(0));
+	char	banana[] = "424242424242424242424242424242424242424242";
+	printf("%d", ft_strlen(banana));
 	return(0);
 }*/
