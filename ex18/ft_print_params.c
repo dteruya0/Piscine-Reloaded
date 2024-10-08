@@ -6,39 +6,33 @@
 /*   By: dteruya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 11:26:34 by dteruya           #+#    #+#             */
-/*   Updated: 2024/10/08 13:11:05 by dteruya          ###   ########.fr       */
+/*   Updated: 2024/10/08 14:04:57 by dteruya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c);
-
-void	ft_print_params(char *str)
+void	ft_putchar(char c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		ft_putchar(str[i]);
-		i++;
-		if (str[i] == '\0')
-		{
-			ft_putchar('\n');
-		}
-	}
+	write(1, &c, 1);
 }
 
 int	main(int argc, char *argv[])
 {
-	int	value;
+	int	i;
+	int	j;
 
-	value = 1;
-	while (argv[value])
+	i = 1;
+	while (i < argc)
 	{
-		ft_print_params(argv[value]);
-		value++;
+		j = 0;
+		while (argv[i][j] != '\0')
+		{
+			ft_putchar(argv[i][j]);
+			j++;
+		}
+		ft_putchar('\n');
+		i++;
 	}
 	return (0);
 }
