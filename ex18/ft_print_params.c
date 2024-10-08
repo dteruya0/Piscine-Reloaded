@@ -6,18 +6,13 @@
 /*   By: dteruya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 11:26:34 by dteruya           #+#    #+#             */
-/*   Updated: 2024/10/08 13:01:52 by dteruya          ###   ########.fr       */
+/*   Updated: 2024/10/08 13:11:05 by dteruya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
 void	ft_putchar(char c);
-/*
-{
-	write(1, &c, 1);
-}
-*/
 
 void	ft_print_params(char *str)
 {
