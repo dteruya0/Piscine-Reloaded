@@ -6,7 +6,7 @@
 /*   By: dteruya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 12:28:44 by dteruya           #+#    #+#             */
-/*   Updated: 2024/10/10 10:06:42 by dteruya          ###   ########.fr       */
+/*   Updated: 2024/10/10 10:13:31 by dteruya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,13 @@ char	*ft_strdup(char *src)
 		return (NULL);
 	}
 	i = 0;
-	while (src[i] != '\0')
+	else
 	{
-		(dest[i] = src[i]);
-		i++;
+		while (src[i] != '\0')
+		{
+			(dest[i] = src[i]);
+			i++;
+		}
 	}
 	return (dest);
 }

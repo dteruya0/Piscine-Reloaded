@@ -6,14 +6,16 @@
 /*   By: dteruya <dteruya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 16:14:15 by dteruya           #+#    #+#             */
-/*   Updated: 2024/10/10 10:07:55 by dteruya          ###   ########.fr       */
+/*   Updated: 2024/10/10 10:26:31 by dteruya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <unistd.h>
 
-void	ft_putchar(char c);
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
 
 int	ft_strcmp(char *s1, char *s2)
 {
@@ -31,7 +33,7 @@ int	ft_strcmp(char *s1, char *s2)
 	return (s1[i] - s2[i]);
 }
 
-void	ft_printd(char *s1)
+void	ft_print(char *s1)
 {
 	int	i;
 
@@ -44,10 +46,8 @@ void	ft_printd(char *s1)
 	ft_putchar('\n');
 }
 
-void	ft_swapg(char *s1[], char *s2[])
+void	ft_swap(char **s1, char **s2)
 {
-	int		i;
-	int		j;
 	char	*temp;
 
 	temp = *s1;
@@ -61,23 +61,23 @@ int	main(int argc, char *argv[])
 	int	j;
 
 	j = 1;
-	while (argc > j)
+	while (j < argc)
 	{
 		i = 1;
-		while (argc > i)
+		while (i < argc)
 		{
 			if (ft_strcmp(argv[i], argv[j]) > 0)
 			{
-				ft_swapg(&argv[i], &argv[j]);
+				ft_swap(&argv[i], &argv[j]);
 			}
 			i++;
 		}
 		j++;
 	}
 	j = 1;
-	while (argc > j)
+	while (j < argc)
 	{
-		ft_printd(argv[j]);
+		ft_print(argv[j]);
 		j++;
 	}
 	return (0);
