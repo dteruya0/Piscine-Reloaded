@@ -6,7 +6,7 @@
 /*   By: dteruya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 14:37:49 by dteruya           #+#    #+#             */
-/*   Updated: 2024/10/10 10:08:41 by dteruya          ###   ########.fr       */
+/*   Updated: 2024/10/10 12:01:05 by dteruya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	main(void)
 	int	max;
 	int	min;
 
-	min = 3;
+	min = 30;
 	max = 10;
 	index = 0;
 	array = ft_range(min, max);
